@@ -7,18 +7,41 @@
   <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
-  <div class="tengah">
-    <div class="card">
-  <h1>ruang bangun persegi</h1>
-  <div class="cardbody">
-    <form>
-      <input type="text" name="txnama" id="txnama" class="txnama">
-      <input type="number">
-      <input type="date">
-      <input type="color">
-      <input type="password"
+  <h1>Ruang Bangun Persegi</h1>
 
+  <div class="tengah">
+
+    <div class="card">
+      <h1>Ruang Bangun Persegi</h1>
+  <div class="cardbody">
+
+    <form>
+      <label>Nilai Panjang</label>
+        <input type="text" id="PJ">
+      <label>Nilai Lebar</label>
+      <input type="text" id="LB">
     </form>
+    <div class="hsl" id="hasil">HASIL</div>
+
   </div>
+  <div class="cardfooter">
+    <button class="btn1" onclick="Hitung()">hitung</button>
+   </div>
+  </div>
+</div>
+
+  <script>
+    function Hitung (){
+    var pj = document.getElementById("PJ").value
+    var lb = document.getElementById("LB").value
+    var luas = pj*lb
+    var res = "Hitung Luas Persegi Panjang<br>Nilai Panjang " + pj + ", dan Lebarnya " + lb + " menjadi:<br>Luas = Panjang X Lebar<br>Luas = " + pj + " X " + lb + "<br>Luas = " + luas;
+
+    document.getElementById("hasil").innerHTML = res;
+    //console.log(res)
+    //var kll = ....
+    }
+  </script>
+  
 </body>
 </html>
